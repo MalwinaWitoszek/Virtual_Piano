@@ -1,0 +1,189 @@
+/* GENERALLY */
+html,body {
+  font-size: 10px;
+  background: url(../img/bg-sheet-music.jpg) center no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: grid;  /*to centering horizontally and vertically*/
+}
+.container{
+  width: 80%;
+  margin: auto; /* to centering horizontally and vertically */
+  padding: 3%;
+  background-color: rgba(255,226,185,.5);
+}
+
+/* GRID */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(45, 2.1%);
+  width: 100%;
+  min-height: 55vh;
+  justify-content: space-between;
+}
+
+/* GRID ITEMS */
+[data-key="90"]{
+  grid-column: 1 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="87"]{
+  grid-column: 3 / span 2 ;
+  grid-row: 1 / span 3;
+}
+[data-key="88"]{
+  grid-column: 4 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="69"]{
+  grid-column: 6 / span 2 ;
+  grid-row: 1 / span 3;
+}
+[data-key="67"]{
+  grid-column: 7 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="86"]{
+  grid-column: 10 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="84"]{
+  grid-column: 12 / span 2 ;
+  grid-row: 1 / span 3;
+}
+[data-key="66"]{
+  grid-column: 13 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="89"]{
+  grid-column: 15 / span 2 ;
+  grid-row: 1 / span 3;
+}
+[data-key="78"]{
+  grid-column: 16 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="85"]{
+  grid-column: 18 / span 2 ;
+  grid-row: 1 / span 3;
+}
+[data-key="77"]{
+  grid-column: 19 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="188"]{
+  grid-column: 22 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="79"]{
+  grid-column: 24 / span 2 ;
+  grid-row: 1 / span 3;
+}
+[data-key="190"]{
+  grid-column: 25 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="80"]{
+  grid-column: 27 / span 2 ;
+  grid-row: 1 / span 3;
+}
+[data-key="191"]{
+  grid-column: 28 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="16"]{
+  grid-column: 31 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="221"]{
+  grid-column: 33 / span 2 ;
+  grid-row: 1 / span 3;
+}
+[data-key="38"]{
+  grid-column: 34 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="220"]{
+  grid-column: 36 / span 2 ;
+  grid-row: 1 / span 3;
+}
+[data-key="97"]{
+  grid-column: 37 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="103"]{
+  grid-column: 39 / span 2 ;
+  grid-row: 1 / span 3;
+}
+[data-key="98"]{
+  grid-column: 40 / span 3 ;
+  grid-row: 1 / span 5;
+}
+[data-key="99"]{
+  grid-column: 43 / span 3 ;
+  grid-row: 1 / span 5;
+}
+
+
+/* KEYS SETTINGS */
+.keyWhite {
+  border: .4rem solid black;
+  border-left: .25rem solid black;
+  border-right: .25rem solid black;
+  border-radius: .5rem;
+  font-size: .2rem;
+  transition: all .17s ease;
+  width: auto;
+  text-align: center;
+  background-color: white;
+  color: black;
+  z-index: 1;
+  position: relative;
+}
+.keyBlack {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  font-size: .2rem;
+  transition: all .07s ease;
+  width: auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+.playing {
+  transform: scale(.98);
+  border: .3rem solid #ffc600;
+  box-shadow: 0 0 .2rem #ffc600;
+}
+.boxShadow{  /* key shadow effect */
+  position: relative; /* For positioning the pseudo-element */
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+.boxShadow::before{
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 .6rem 1.3rem .4rem rgba(27, 9, 9, 0.5);
+  opacity: 1;
+  transition: opacity 500ms;
+}
+.boxShadow:hover::before{
+    /* hide the pseudo-element on hover. */
+    opacity: 0;
+}
+kbd {
+  display: block;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+}
+
