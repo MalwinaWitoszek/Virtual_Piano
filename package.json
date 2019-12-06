@@ -1,0 +1,23 @@
+{
+  "name": "projekt_virtual_piano",
+  "version": "1.0.0",
+  "description": "If you want to play, use the keyboard keys assigned to each piano key",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MalwinaWitoszek/Virtual_Piano.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MalwinaWitoszek/Virtual_Piano/issues"
+  },
+  "homepage": "https://github.com/MalwinaWitoszek/Virtual_Piano#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4"
+  }
+}
